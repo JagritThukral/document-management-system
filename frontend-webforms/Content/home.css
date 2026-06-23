@@ -1,0 +1,73 @@
+﻿
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width:768px) {
+    .card-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.page-header {
+    margin-bottom: 2rem;
+}
+.card {
+    border: 1px solid var(--gray-border);
+    height: 12rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--foreground);
+    border-radius: 0.75rem;
+    display: flex;
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 0.5rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    margin-bottom: 1rem;
+}
+    .card__icon svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block; 
+    }
+.card__icon--primary {
+    color: var(--primary);
+    background-color: var(--primary-light);
+}
+.card__header{
+
+}
+.card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.card__text {
+    color: var(--secondary-muted);
+    font-size: 1.25rem;
+
+}
+@media(hover: hover) and (pointer: fine) {
+    .card:hover {
+        border-color: var(--primary);
+    }
+        .card:hover .card__icon {
+            color: var(--surface-lowest);
+            background-color: var(--primary);
+        }
+}

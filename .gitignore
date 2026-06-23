@@ -1,0 +1,10 @@
+# Ignore everything in the root directory
+/*
+
+# Except the specific project folders
+!/backend/
+!/frontend-webforms/
+
+# also allow readme and gitignore file itself
+!README.md
+!.gitignore
